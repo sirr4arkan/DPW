@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+
+        .item1 {
+
+            grid-column: 1 / 4;
+
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Skenario 1 - grid-row (Dinonaktifkan, lihat CSS)</h2>
+    <p>Untuk Skenario 1: aktifkan <code>grid-row: 1 / 4;</code> pada class item1 dan nonaktifkan grid-column.</p>
+
+    <h2>Skenario 2 - grid-column: 1 / 4</h2>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div>Tulis kesimpulan disini</div>
+    </div>
+
+    <p>Kesimpulan Skenario 1 (grid-row): Properti <code>grid-row: 1 / 4</code> membuat item1 membentang dari baris 1 hingga sebelum baris 4 (span 3 baris ke bawah). Item ini akan mengambil ruang vertikal sebanyak 3 baris, sementara item lain mengisi kolom-kolom di sampingnya.</p>
+
+    <p>Kesimpulan Skenario 2 (grid-column): Properti <code>grid-column: 1 / 4</code> membuat item1 membentang dari kolom 1 hingga sebelum kolom 4 (span 3 kolom ke samping). Ini membuat item pertama lebih lebar dan mengambil banyak ruang horizontal dibanding item lainnya. Perbedaan dengan grid-row adalah arah bentangan: grid-column ke samping (horizontal), grid-row ke bawah (vertikal).</p>
+
+</body>
+</html>

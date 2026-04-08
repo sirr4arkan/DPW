@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeri Foto Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .galeri-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .galeri-flex .foto {
+            width: 200px;
+            height: 200px;
+            background-color: #cccccc;
+            border: 2px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .galeri-flex .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Foto kata meme anak teknik</h1>
+
+    <div class="galeri-flex">
+        <div class="foto"><img src="image/foto1.jpg" alt="Foto 1" onerror="this.parentElement.innerText='Foto 1'"></div>
+        <div class="foto"><img src="image/foto2.jpg" alt="Foto 2" onerror="this.parentElement.innerText='Foto 2'"></div>
+        <div class="foto"><img src="image/foto3.jpg" alt="Foto 3" onerror="this.parentElement.innerText='Foto 3'"></div>
+        <div class="foto"><img src="image/foto4.jpg" alt="Foto 4" onerror="this.parentElement.innerText='Foto 4'"></div>
+        <div class="foto"><img src="image/foto5.jpg" alt="Foto 5" onerror="this.parentElement.innerText='Foto 5'"></div>
+        <div class="foto"><img src="image/foto6.jpg" alt="Foto 6" onerror="this.parentElement.innerText='Foto 6'"></div>
+
+        <div class="foto"><img src="image/foto7.jpg" alt="Foto 7" onerror="this.parentElement.innerText='Foto 7'"></div>
+        <div class="foto"><img src="image/foto8.jpg" alt="Foto 8" onerror="this.parentElement.innerText='Foto 8'"></div>
+        <div class="foto"><img src="image/foto9.jpg" alt="Foto 9" onerror="this.parentElement.innerText='Foto 9'"></div>
+        <div class="foto"><img src="image/foto10.jpg" alt="Foto 10" onerror="this.parentElement.innerText='Foto 10'"></div>
+        <div class="foto"><img src="image/foto11.jpg" alt="Foto 11" onerror="this.parentElement.innerText='Foto 11'"></div>
+        <div class="foto"><img src="image/foto12.jpg" alt="Foto 12" onerror="this.parentElement.innerText='Foto 12'"></div>
+
+        <div class="foto"><img src="image/foto13.jpg" alt="Foto 13" onerror="this.parentElement.innerText='Foto 13'"></div>
+        <div class="foto"><img src="image/foto14.jpg" alt="Foto 14" onerror="this.parentElement.innerText='Foto 14'"></div>
+        <div class="foto"><img src="image/foto15.jpg" alt="Foto 15" onerror="this.parentElement.innerText='Foto 15'"></div>
+        <div class="foto"><img src="image/foto16.jpg" alt="Foto 16" onerror="this.parentElement.innerText='Foto 16'"></div>
+        <div class="foto"><img src="image/foto17.jpg" alt="Foto 17" onerror="this.parentElement.innerText='Foto 17'"></div>
+        <div class="foto"><img src="image/foto18.jpg" alt="Foto 18" onerror="this.parentElement.innerText='Foto 18'"></div>
+    </div>
+</body>
+</html>

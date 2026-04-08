@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Syafi'</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background: #f1f5f9;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0ea5e9, #94a3b8);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-weight: bold;
+        }
+
+        .menu-card {
+            border: none;
+            border-radius: 20px;
+            transition: 0.3s;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #0ea5e9;
+        }
+
+        .btn-custom {
+            background: #0ea5e9;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .btn-custom:hover {
+            background: #0284c7;
+        }
+
+        footer {
+            background: #cbd5f5;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">MyProfile</a>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>Halo, Saya Syafi' Arkan Musthafa</h1>
+        <p class="mt-3">Selamat datang di website pribadi saya yang modern dan simpel</p>
+        <a href="about.html" class="btn btn-light mt-3">Lihat Profil</a>
+    </div>
+</section>
+
+<div class="container mt-5">
+    <div class="row text-center g-4">
+
+        <div class="col-md-4">
+            <div class="card menu-card p-4">
+                <i class="bi bi-person icon"></i>
+                <h4 class="mt-3">About</h4>
+                <p>Tentang diri saya</p>
+                <a href="about.html" class="btn btn-custom">Buka</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card menu-card p-4">
+                <i class="bi bi-briefcase icon"></i>
+                <h4 class="mt-3">Portofolio</h4>
+                <p>Kumpulan project saya</p>
+                <a href="portofolio.html" class="btn btn-custom">Buka</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card menu-card p-4">
+                <i class="bi bi-envelope icon"></i>
+                <h4 class="mt-3">Contact</h4>
+                <p>Hubungi saya</p>
+                <a href="contact.html" class="btn btn-custom">Buka</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Syafi' Arkan Musthafa | Politeknik Negeri Madiun</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dialog Modern</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            background: #6c5ce7;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5a4bcf;
+            transform: translateY(-2px);
+        }
+
+        .ui-dialog {
+            border-radius: 15px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+            padding: 0;
+        }
+
+        .ui-dialog-titlebar {
+            background: #6c5ce7 !important;
+            color: white !important;
+            border: none;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .ui-dialog-content {
+            padding: 20px;
+            font-size: 15px;
+            color: #333;
+            text-align: center;
+        }
+
+        .ui-widget-overlay {
+            background: rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+
+<button id="open">Buka Dialog</button>
+
+<div id="dialog" title="Informasi">
+    <p>ini adalah jendela dialog yaitu saya beri gradasi warna.</p>
+</div>
+
+<script>
+$(function(){
+
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        width: 350,
+        show: { effect: "fade", duration: 300 },
+        hide: { effect: "fade", duration: 200 }
+    });
+
+    $("#open").click(function(){
+        $("#dialog").dialog("open");
+    });
+
+});
+</script>
+
+</body>
+</html>

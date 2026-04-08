@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            background: #2c3e50;
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 50px auto;
+        }
+        .menu div {
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .menu div:hover {
+            background: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <div>Home</div>
+    <div>Profile</div>
+    <div>About</div>
+</div>
+
+<script>
+$(".menu div").click(function(){
+    alert("Kamu memilih: " + $(this).text());
+});
+</script>
+
+</body>
+</html>

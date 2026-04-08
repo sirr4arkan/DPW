@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div dan Span</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='css/main.css'>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Media Arkan's gank </h1>
+    </div>
+
+    <div id="main">
+        <div id="link">
+            <ul>
+                <li><a href="#">Madiun</a></li>
+                <li><a href="#">Magetan</a></li>
+                <li><a href="#">Solo</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <fieldset>
+                <legend>Form Pendaftaran Mahasiswa Baru</legend>
+                <form action="proses.php" method="POST">
+
+                    <label>Nama Lengkap</label>
+                    <input type="text" name="nama_lengkap"><br>
+
+                    <label>Tempat/Tanggal Lahir</label>
+                    <input type="text" name="tempat_lahir"> /
+                    <select name="tgl">
+                        <?php for($i=1;$i<=31;$i++) echo "<option value='$i'>$i</option>"; ?>
+                    </select> -
+                    <select name="bln">
+                        <?php for($i=1;$i<=12;$i++) echo "<option value='$i'>$i</option>"; ?>
+                    </select> -
+                    <select name="thn">
+                        <?php for($i=1989;$i<=1994;$i++) echo "<option value='$i'>$i</option>"; ?>
+                    </select><br>
+
+                    <label>Agama</label>
+                    <select name="agama">
+                        <option value="">-PILIH-</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select><br>
+
+                    <label>Jenis Kelamin</label>
+                    <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="jk" value="Perempuan"> Perempuan<br>
+
+                    <label>No. Ijazah SMA/MA</label>
+                    <input type="text" name="no_ijazah"><br>
+
+                    <label>Foto (Ukuran File Maks. 20 KB)</label>
+                    <input type="file" name="foto"><br>
+
+                    <label>Nama Ayah</label>
+                    <input type="text" name="nama_ayah"><br>
+
+                    <label>Nama Ibu</label>
+                    <input type="text" name="nama_ibu"><br>
+
+                    <label>Alamat Rumah</label><br>
+                    <textarea name="alamat_rumah" rows="4" cols="40"></textarea><br>
+
+                    <label>No. Telp</label>
+                    <input type="text" name="no_telp"><br>
+
+                    <label>Nama Sekolah Asal</label>
+                    <input type="text" name="nama_sekolah"><br>
+
+                    <label>Alamat Sekolah Asal</label><br>
+                    <textarea name="alamat_sekolah" rows="4" cols="40"></textarea><br>
+
+                    <label>Jurusan Dipilih</label>
+                    <select name="jurusan">
+                        <option value="">-PILIH-</option>
+                        <option value="KA">Komputerisasi Akuntansi</option>
+                        <option value="AB">Administrasi Bisnis</option>
+                        <option value="TKK">Teknik Komputer Kontrol</option>
+                        <option value="TL">Teknik Listrik</option>
+                        <option value="MO">Teknik Mesin Otomotif</option>
+                        <option value="PK">Teknik Perkeretaapian</option>
+                        <option value="TI">Teknologi Informasi</option>
+                        <option value="AK">Akuntansi</option>
+                    </select><br>
+
+                    <label>Tahu informasi ini dari :</label>
+                    <input type="checkbox" name="info" value="Koran"> Koran
+                    <input type="checkbox" name="info" value="Website"> Website
+                    <input type="checkbox" name="info" value="Televisi"> Televisi
+                    <input type="checkbox" name="info" value="Radio"> Radio
+                    <input type="checkbox" name="info" value="Teman"> Teman<br><br>
+
+                    <input type="submit" value="DAFTAR">
+                    <input type="reset" value="BATAL">
+
+                </form>
+            </fieldset>
+        </div>
+    </div>
+
+    <div id="footer">
+        <i>copyright@ArkanMusthafa_253307030</i>
+    </div>
+
+</body>
+</html>

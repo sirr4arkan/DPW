@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Skenario 1 - grid-column-start dan grid-column-end</h2>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">Kesimpulan Skenario 1: Properti grid-column-start dan grid-column-end digunakan untuk menentukan di kolom mana item grid dimulai dan berakhir. Item1 dengan grid-column-start:1 dan grid-column-end:3 akan mengambil ruang dari kolom 1 hingga sebelum kolom 3 (span 2 kolom). Mengubah nilai ini mempengaruhi seberapa lebar item dalam grid.</div>
+    </div>
+
+    <br>
+
+    <h2>Skenario 2 - grid-template-columns</h2>
+    <div style="display:grid; grid-gap:50px; background-color:#2196F3; grid-template-columns: 70px 300px auto 40px; padding:10px;">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">Kesimpulan Skenario 2: Properti grid-template-columns menentukan jumlah kolom dan lebar masing-masing kolom. Nilai auto membuat kolom menyesuaikan sisa ruang yang tersedia. Nilai piksel (px) menentukan lebar yang pasti dan tetap. Contoh: "70px 300px auto 40px" membuat 4 kolom dengan lebar berbeda-beda.</div>
+    </div>
+
+</body>
+</html>

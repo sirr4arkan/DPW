@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar CSS Grid box</title>
+    <style>
+        .tempat_grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+
+            /* Skenario 3: grid-column-gap dan grid-row-gap */
+            grid-column-gap: 10px;
+            grid-row-gap: 50px;
+
+            /* Skenario 4: grid-gap (menggantikan skenario 3) */
+            /* grid-gap: 50px; */
+        }
+
+        .item_grid {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tampilan:</h1>
+
+    <h2>Skenario 1 - Grid Dasar (display: grid)</h2>
+    <div class="tempat_grid">
+        <div class="item_grid">1</div>
+        <div class="item_grid">2</div>
+        <div class="item_grid">3</div>
+        <div class="item_grid">4</div>
+        <div class="item_grid">5</div>
+        <div class="item_grid">6</div>
+        <div class="item_grid">7</div>
+        <div class="item_grid">8</div>
+        <div class="item_grid">9</div>
+        <div class="item_grid">Kesimpulan Skenario 1: Dengan display:grid dan grid-template-columns: auto auto auto, item tersusun dalam 3 kolom secara otomatis. Item mengisi baris baru setelah kolom ke-3 penuh. Background biru pada container memperlihatkan area grid dengan jelas.</div>
+    </div>
+
+    <br>
+
+    <h2>Skenario 3 - grid-column-gap dan grid-row-gap</h2>
+    <p>Kesimpulan Skenario 3: Properti <code>grid-column-gap</code> menambah jarak antar kolom, sedangkan <code>grid-row-gap</code> menambah jarak antar baris. Dengan nilai grid-column-gap: 10px dan grid-row-gap: 50px, jarak vertikal antar baris lebih besar dari jarak horizontal antar kolom. Jarak ini membuat tampilan grid lebih rapi dan mudah dibaca.</p>
+
+    <br>
+
+    <h2>Skenario 4 - grid-gap</h2>
+    <div style="display:grid; grid-template-columns: auto auto auto; background-color:#2196F3; padding:10px; grid-gap: 50px;">
+        <div class="item_grid">1</div>
+        <div class="item_grid">2</div>
+        <div class="item_grid">3</div>
+        <div class="item_grid">4</div>
+        <div class="item_grid">5</div>
+        <div class="item_grid">6</div>
+        <div class="item_grid">7</div>
+        <div class="item_grid">8</div>
+        <div class="item_grid">9</div>
+    </div>
+    <p>Kesimpulan Skenario 4: Properti <code>grid-gap: 50px</code> adalah shorthand yang menggabungkan grid-column-gap dan grid-row-gap sekaligus dalam satu baris. Hasilnya memberikan jarak yang sama (50px) pada semua sisi antar item, baik horizontal maupun vertikal, sehingga penulisan kode menjadi lebih singkat dan efisien.</p>
+
+</body>
+</html>

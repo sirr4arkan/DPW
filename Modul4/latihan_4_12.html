@@ -1,0 +1,136 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Template CSS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #header {
+      background-color: blue;
+      color: yellow;
+      padding: 15px 20px;
+    }
+    #header h1 {
+      font-size: 24px;
+      color: yellow;
+    }
+    #header p {
+      font-size: 13px;
+      color: white;
+    }
+
+    #container {
+      display: flex;
+      min-height: 300px;
+    }
+
+    #nav {
+      width: 200px;
+      border: 2px dashed #555;
+      padding: 15px;
+      flex-shrink: 0;
+    }
+    #nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    #nav ul li {
+      margin-bottom: 6px;
+    }
+    #nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+    }
+    #nav ul li a:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+    #nav ul li:nth-child(6) a {
+      text-decoration: underline;
+    }
+
+    #divider {
+      width: 1px;
+      background-color: #aaa;
+      margin: 10px 0;
+    }
+
+    #content {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+    #content img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+    #content h2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    #content h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    #content p {
+      color: red;
+      font-size: 13px;
+      max-width: 380px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #footer {
+      background-color: #e0e0e0;
+      padding: 10px 20px;
+      text-align: right;
+      font-size: 13px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <h1>Halo CSS !</h1>
+    <p>Ini adalah website CSS saya</p>
+  </div>
+
+  <div id="container">
+    <div id="nav">
+      <ul>
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+        <li><a href="#">Menu 4</a></li>
+        <li><a href="#">Menu 5</a></li>
+        <li><a href="#">Menu 6</a></li>
+      </ul>
+    </div>
+
+    <div id="divider"></div>
+
+    <div id="content">
+      <img src="https://assets.siakadcloud.com/uploads/pnm/logoaplikasi/1124.jpg" alt="Logo Politeknik Negeri Madiun">
+      <h2>TI</h2>
+      <h3>Politeknik Negeri Madiun</h3>
+      <p>Mewujudkan pendidikan tinggi vokasi dalam bidang
+         Teknologi Informasi dan penerapannya yang berkualitas,
+         inovatif dan berdaya saing Nasional.</p>
+    </div>
+  </div>
+
+  <div id="footer">
+   Syafi Arkan Musthafal | NPM 253307030 | TI-2A
+  </div>
+
+</body>
+</html>

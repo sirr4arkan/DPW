@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validasi</title>
+</head>
+<body>
+    <form onsubmit="return validasi()">
+        Nama: <input type="text" id="nama">
+        <input type="submit" value="Kirim">
+    </form>
+
+    <script>
+        function validasi() {
+            var nama = document.getElementById("nama").value;
+            if (nama == "") {
+                alert("Nama tidak boleh kosong!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

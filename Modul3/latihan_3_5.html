@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Halaman Video</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Syafi Arkan Musthafa">
+  <meta name="nim" content="253307030">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+    nav {
+      float: left;
+      width: 30%;
+      background: #ccc;
+      padding: 20px;
+      min-height: 400px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      min-height: 400px;
+    }
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Judul Website</h2>
+  </header>
+
+  <section>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gambar.html">Gambar</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="svg.html">SVG</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h1>Pemutar Video</h1>
+
+      <video width="420" height="315" controls>
+        <source src="gambar/video/lovemenot.mp4" type="video/mp4">
+        Browser tidak mendukung.
+      </video>
+
+      <p>
+        <strong>Kesimpulan:</strong>
+        Tag &lt;video&gt; digunakan untuk menampilkan video di halaman web.
+        Atribut <em>controls</em> menampilkan kontrol pemutar.
+        Atribut <em>autoplay</em> membuat video langsung diputar (perlu <em>muted</em> agar browser mengizinkan autoplay).
+        Atribut <em>muted</em> membuat video tanpa suara secara default.
+        <!-- Tulis kesimpulan hasil ujicoba kamu disini -->
+      </p>
+
+      <h2>Video dari YouTube</h2>
+      <iframe width="420" height="315"
+              src="https://youtu.be/vFBWXqyb5P0?list=RDvFBWXqyb5P0">
+      </iframe>
+
+      <p>Nama: Syafi' Arkan Musthafa| NIM: 253307030</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>Nama: Syafi' Arkan Musthafa | NIM: 253307030</p>
+  </footer>
+</body>
+</html>

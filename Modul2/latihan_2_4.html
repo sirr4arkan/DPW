@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div dan Span</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        #header { background-color: #4a90d9; color: white; padding: 15px 20px; }
+        #main { display: flex; }
+        #link { background-color: #f0f0f0; width: 180px; min-height: 300px; padding: 15px; }
+        #link ul { list-style: none; padding: 0; margin: 0; }
+        #link ul li { margin-bottom: 8px; }
+        #link ul li a { text-decoration: none; color: #333; }
+        #content { flex: 1; padding: 20px; }
+        #footer { background-color: #333; color: white; text-align: center; padding: 10px; }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <h1>Judul/Header Website</h1>
+</div>
+
+<div id="main">
+    <div id="link">
+        <ul>
+            <li><a href="#">Madiun</a></li>
+            <li><a href="#">Magetan</a></li>
+            <li><a href="#">Solo</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <h1 style="background-color:powderblue;">background-color:powderblue</h1>
+        <p style="background-color:tomato;">background-color:tomato;.</p>
+
+        <h1 style="color:blue;">color:blue;</h1>
+        <p style="color:red;">color:red;</p>
+
+        <h1 style="font-family:verdana;">Heading dengan font verdana</h1>
+        <p style="font-family:courier;">Paragraf dengan dont courier.</p>
+
+        <h1 style="font-size:300%;">Ukuran font 300%</h1>
+        <p style="font-size:160%;">Ukuran font 160%</p>
+
+        <h1 style="text-align:center;">Heading dengan teks tengan</h1>
+        <p style="text-align:center;">Paragraf dengan posisi teks tengan.</p>
+
+        <p>Cara mengunakan style warna dengan nama "Tomato":</p>
+        <h1 style="background-color:tomato;">Tomato</h1>
+
+        <p>Cara mengunakan warna style dengan rgb, hex, dan hsl dengan nilai yang sama dengan tomato:</p>
+        <h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
+        <h1 style="background-color:#ff6347;">#ff6347</h1>
+        <h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+
+        <p> Menggunakan  "Tomato", dengan tinkat transparansi 50%:</p>
+        <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+        <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
+
+        <p>Selain nama warna yang telah ditentukan sebelumnya, warna dapat ditentukan menggunakan RGB,
+        HEX, HSL, atau bahkan warna transparan menggunakan nilai warna RGBA atau HSLA</p>
+
+    </div>
+</div>
+
+<div id="footer">
+    <p><em>copyright@Syafi' Arkan Musthafa_253307030</em></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout CSS Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .layout-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu   main   right"
+                "menu   footer footer";
+            grid-template-columns: 150px 1fr 150px;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 5px;
+            background-color: #ccc;
+            padding: 5px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .menu {
+            grid-area: menu;
+            background-color: #2196F3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .right {
+            grid-area: right;
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #555;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

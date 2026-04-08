@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Progress</title>
+
+    <!-- jQuery & jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #27ae60;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            background: #219150;
+        }
+
+        #dialog {
+            display: none;
+        }
+
+        /* Progress Bar Hijau */
+        .ui-progressbar-value {
+            background: #27ae60 !important;
+            border-radius: 10px;
+        }
+
+        #progress-container {
+            margin-top: 15px;
+        }
+
+        #percent {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<button id="download">Mulai Download</button>
+
+<div id="dialog" title="Downloading...">
+    <p>File sedang diunduh...</p>
+
+    <div id="progress-container">
+        <div id="progressbar"></div>
+        <div id="percent">0%</div>
+    </div>
+</div>
+
+<script>
+$(function(){
+
+    $("#progressbar").progressbar({
+        value: 0
+    });
+
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        width: 350
+    });
+
+    $("#download").click(function(){
+        $("#dialog").dialog("open");
+
+        let progress = 0;
+
+        let interval = setInterval(function(){
+            progress += 2;
+
+            $("#progressbar").progressbar("value", progress);
+            $("#percent").text(progress + "%");
+
+            if(progress >= 100){
+                clearInterval(interval);
+
+                setTimeout(function(){
+                    $("#dialog").dialog("close");
+                    alert("Download selesai!");
+                }, 500);
+            }
+
+        }, 100);
+    });
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Box</title>
+</head>
+<body>
+    <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+    <input type="radio" name="jk" value="Perempuan"> Perempuan
+    <button onclick="cek()">Cek</button>
+
+    <script>
+        function cek() {
+            var pilihan = document.getElementsByName("jk");
+            for (var i = 0; i < pilihan.length; i++) {
+                if (pilihan[i].checked) {
+                    alert("Pilihan: " + pilihan[i].value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

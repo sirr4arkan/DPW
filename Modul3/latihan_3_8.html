@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Pendaftaran</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Syafi Arkan Musthafa">
+  <meta name="nim" content="253307030">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+    nav {
+      float: left;
+      width: 30%;
+      background: #ccc;
+      padding: 20px;
+      min-height: 600px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #5880dd;
+      min-height: 600px;
+    }
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    footer {
+      background-color: #ed8686;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    h2.form-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    fieldset {
+      margin-bottom: 15px;
+      padding: 15px;
+      border: 1px solid #2020ff;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 5px;
+    }
+    label {
+      display: inline-block;
+      width: 200px;
+      margin: 8px 0;
+      vertical-align: top;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"],
+    input[type="range"] {
+      padding: 4px;
+      margin: 5px 0;
+    }
+    input[type="submit"] {
+      margin-top: 10px;
+      padding: 5px 15px;
+    }
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Form pendaftaran Sedap Malam</h2>
+  </header>
+
+  <section>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gambar.html">Gambar</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="svg.html">SVG</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2 class="form-title">Data Diri</h2>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Informasi Pribadi</legend>
+
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required><br>
+
+          <label for="telepon">No. Telepon</label>
+
+          <input type="tel" id="telepon" name="telepon"
+                 placeholder="0812-345678"
+                 pattern="[0-9]{4}-[0-9]{6}"
+                 title="Format: XXXX-XXXXXX (contoh: 0812-345678)"
+                 required><br>
+
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email"
+                 placeholder="nama@domain.com" required><br>
+
+          <label for="tgl_lahir">Tanggal Lahir</label>
+          <input type="date" id="tgl_lahir" name="tgl_lahir"
+                 min="1987-01-01"
+                 max="1993-01-01"
+                 required><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Permintaan Interview</legend>
+
+          <label for="tujuan">Format Interview</label>
+          <input type="text" id="tujuan" name="tujuan"
+                 placeholder="Tujuan pertemuan" required><br>
+
+          <label for="kepentingan">Tingkat kepedean</label>
+          <input type="range" id="kepentingan" name="kepentingan"
+                 min="0" max="10" value="5"
+                 oninput="document.getElementById('nilai_kepentingan').innerText = this.value;">
+          <span id="nilai_kepentingan">5</span><br>
+
+          <label for="tanggal">Tanggal</label>
+          <input type="date" id="tanggal" name="tanggal" required><br>
+
+          <label for="waktu">Waktu</label>
+          <input type="time" id="waktu" name="waktu"
+                 min="17:00" max="21:00"
+                 required><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+
+      </form>
+    </article>
+  </section>
+
+  <footer>
+    <p>Footer - Nama: Syafi' Arkan Musthafa | NIM: 253307030</p>
+  </footer>
+
+  <script>
+    var today = new Date();
+    today.setDate(today.getDate() + 1);
+    var yyyy = today.getFullYear();
+    var mm   = String(today.getMonth() + 1).padStart(2, '0');
+    var dd   = String(today.getDate()).padStart(2, '0');
+    document.getElementById('tanggal').min = yyyy + '-' + mm + '-' + dd;
+  </script>
+</body>
+</html>

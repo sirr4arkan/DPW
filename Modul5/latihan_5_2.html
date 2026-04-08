@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Flex Box</title>
+    <style>
+        .wadah-flex {
+            display: flex;
+            background-color: #f0e68c;
+        }
+
+        .wadah-flex > div {
+            background-color: #4CAF50;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Skenario 1 - Display Flex + Background Color</h2>
+    <div class="wadah-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p>Kesimpulan skenario 1 adalah : Dengan menambahkan <code>display: flex</code> pada class wadah-flex, elemen-elemen div anak di dalamnya akan tersusun secara horizontal (berderet ke samping) secara default. Tanpa flex, div akan tersusun secara vertikal (block). Penambahan background color memperlihatkan area container flex dengan jelas.</p>
+
+    <hr>
+
+    <h2>Skenario 2 - Style pada Div Anak</h2>
+    <div class="wadah-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p>Kesimpulan skenario 2 adalah : Setelah menambahkan style pada setiap div anak (background-color, margin, padding, font-size), setiap item flex terlihat lebih jelas dengan kotak berwarna hijau, jarak antar item, dan teks yang lebih besar. Properti ini memperindah tampilan dan memudahkan visualisasi layout flex.</p>
+
+    <hr>
+
+    <h2>Skenario 3 - flex-direction</h2>
+    <div class="wadah-flex" style="flex-direction: row;">
+        <div>1</div><div>2</div><div>3</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div>
+        <div>10</div><div>11</div><div>12</div>
+    </div>
+    <p>Kesimpulan skenario 3 adalah : Properti <code>flex-direction</code> menentukan arah susunan item flex. Nilai <b>row</b> (default) menyusun item dari kiri ke kanan. Nilai <b>row-reverse</b> membalik urutan dari kanan ke kiri. Nilai <b>column</b> menyusun item dari atas ke bawah. Nilai <b>column-reverse</b> membalik susunan dari bawah ke atas.</p>
+
+    <hr>
+
+    <h2>Skenario 4 - flex-wrap</h2>
+    <div class="wadah-flex" style="flex-wrap: wrap;">
+        <div>1</div><div>2</div><div>3</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div>
+        <div>10</div><div>11</div><div>12</div>
+    </div>
+    <p>Kesimpulan skenario 4 adalah : Properti <code>flex-wrap</code> mengatur apakah item flex akan membungkus ke baris baru jika tidak cukup ruang. Nilai <b>wrap</b> membuat item turun ke baris berikutnya. Nilai <b>nowrap</b> (default) memaksa semua item dalam satu baris sehingga bisa menyempit. Nilai <b>wrap-reverse</b> membungkus ke atas (baris baru di atas).</p>
+
+    <hr>
+
+    <h2>Skenario 5 - flex-flow</h2>
+    <div class="wadah-flex" style="flex-flow: row wrap;">
+        <div>1</div><div>2</div><div>3</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div>
+        <div>10</div><div>11</div><div>12</div>
+    </div>
+    <p>Kesimpulan skenario 5 adalah : Properti <code>flex-flow</code> adalah singkatan (shorthand) yang menggabungkan <code>flex-direction</code> dan <code>flex-wrap</code> dalam satu deklarasi. Contoh: <code>flex-flow: row wrap</code> berarti arah horizontal dan item akan membungkus ke baris baru. Ini lebih ringkas dibanding menulis dua properti terpisah.</p>
+
+    <hr>
+
+    <h2>Skenario 6 - justify-content</h2>
+    <div class="wadah-flex" style="flex-wrap: wrap; justify-content: space-around;">
+        <div>1</div><div>2</div><div>3</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div>
+        <div>10</div><div>11</div><div>12</div>
+    </div>
+    <p>Kesimpulan skenario 6 adalah : Properti <code>justify-content</code> digunakan untuk mengatur posisi dan distribusi item flex sepanjang sumbu utama (main axis). Nilai <b>flex-start</b> menempel ke kiri, <b>flex-end</b> ke kanan, <b>center</b> ke tengah, <b>space-between</b> memberi jarak merata antar item (tanpa jarak di tepi), <b>space-around</b> memberi jarak sama di sekeliling item, dan <b>space-evenly</b> memberi jarak yang benar-benar sama termasuk ke tepi.</p>
+
+</body>
+</html>

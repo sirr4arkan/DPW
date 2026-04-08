@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jam Real Time</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        #jam {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+        }
+        #tanggal {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div id="jam"></div>
+    <div id="tanggal"></div>
+</div>
+
+<script>
+function updateWaktu() {
+    let now = new Date();
+    document.getElementById("jam").innerHTML = now.toLocaleTimeString();
+    document.getElementById("tanggal").innerHTML = now.toDateString();
+}
+setInterval(updateWaktu, 1000);
+</script>
+
+</body>
+</html>
