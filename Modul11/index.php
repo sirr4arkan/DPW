@@ -27,7 +27,7 @@
             <div class="sidebar-profile">
                 <div class="avatar">👤</div>
                 <div>
-                    <div>Administrator</div>
+                    <div>Admin</div>
                     <div style="font-size:0.75rem; color:#94a3b8; font-weight:400;">admin@sia.edu</div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div class="menu-header">Dashboard</div>
                 <li class="active"><a href="index.php">🏠 Dashboard Akademik</a></li>
                 
-                <div class="menu-header">Master Data</div>
+                <div class="menu-header">Pendataan</div>
                 <li><a href="viewdosen.php">👨‍🏫 Data Dosen</a></li>
                 <li><a href="viewmahasiswa.php">🎓 Data Mahasiswa</a></li>
                 <li><a href="viewmatakuliah.php">📚 Data Mata Kuliah</a></li>
